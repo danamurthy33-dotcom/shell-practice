@@ -1,11 +1,11 @@
 #!/bin/bash
 
-Date = $(Date +%F)
+S = $(date +%F)
 
-echo "Todays date is $Date"
+echo "Todays date is $S"
 
-Start_Time = $(Date +%S)
+Start_Time = $(date +%S)
 sleep 10
-End_Time = $(Date +%S)
-Total = $(($Start_Time - $End_Time ))
+End_Time = $(date +%S)
+Total = $(($End_Time - $Start_Time ))
 echo "Execution time is $Total"
