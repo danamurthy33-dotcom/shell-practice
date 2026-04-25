@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -s P=$1
+read P=$1
 
 
 if [[ $P =~ [a-zA-Z] ]] && [[ $P =~ [0-9] ]] && [[ $P =~ [~!@#$%^*] ]]; then
