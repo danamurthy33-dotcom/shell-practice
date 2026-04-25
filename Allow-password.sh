@@ -1,6 +1,7 @@
 #!/bin/bash
 
-P=$1
+read -s P=$1
+
 
 if [[ $P =~ [a-zA-Z] ]] && [[ $P =~ [0-9] ]] && [[ $P =~ [~!@#$%^*] ]]; then
     echo "$P is strong password"
