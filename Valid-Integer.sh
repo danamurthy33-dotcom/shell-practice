@@ -20,9 +20,9 @@ Examples:
 $ → End of string
 COMMENT
 
-# :<< comment 
- #   Type                                    |
- #   | -------------------- | ----------------------- |
+: << 'COMMENT'
+  Type                                    |
+  | -------------------- | ----------------------- |
   #  | Integer              | ^-?[0-9]+$`            |
    # | Float/Double         | `^-?[0-9]+(\.[0-9]+)?$` |
     #| String               | `^[a-zA-Z]+$`           |
@@ -31,8 +31,7 @@ COMMENT
     #| Boolean (yes/no)     | `^(yes\|no)$`           |
 
     #^(^[a-zA-Z0-9]) except character and num
-#comment
-
+COMMENT
 if [[ $N =~ ^-?[0-9]+$ ]]; then
     echo "$N is valid integer/input"
 else 
