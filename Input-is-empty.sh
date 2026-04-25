@@ -7,6 +7,7 @@ if [[ -z $N ]] ; then
     exit 1
 else 
     ls -al
+    ps -ef
     grep $0 | exit 1
     echo "Input is valid"
     exit 0
