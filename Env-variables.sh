@@ -1,3 +1,3 @@
 #!/bin/bash
-Var = $(export Course = "DevOps")
+export Var = "Devops Course"
 echo "$Var"
