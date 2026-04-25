@@ -1,22 +1,24 @@
 #!/bin/bash
 
 N=$1
-: << 'COMMENT' 
-=~ means pattern match 
-^ - Start of string
-🔹 -? Optional minus sign
-?-Zero or only one - allow
-So it allows:
+
+: << 'COMMENT'
+=~ means pattern match
+
+^  → Start of string
+-? → Optional minus sign
+
+Examples:
 5
 -5
-🔹 [0-9]+
-One or more digits
+
+[0-9]+ → one or more digits
 Examples:
 1
 12345
-🔹 $
-End of string
-COMMENT 
+
+$ → End of string
+COMMENT
 
 # :<< comment 
  #   Type                                    |
