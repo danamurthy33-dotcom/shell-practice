@@ -1,5 +1,5 @@
 #!/bin/bash
 
-P1=Murthy
-P2=Mounika
-echo $P1"Weds $P2"
+P1=$1
+P2=$2
+echo $P1"Weds" $P2
