@@ -21,7 +21,7 @@ $ → End of string
 COMMENT
 
 : << 'COMMENT'
-  Type                                    |
+Type                                    |
   | -------------------- | ----------------------- |
   #  | Integer              | ^-?[0-9]+$`            |
    # | Float/Double         | `^-?[0-9]+(\.[0-9]+)?$` |
