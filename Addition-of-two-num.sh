@@ -6,5 +6,5 @@ for i in ${N[@]}; do
 done
 echo "sum of all:$Sum"
 
-Sum=$(IFS=+; echo "$(($N[@]))")
+Sum=$(IFS=+; echo "$(($N[*]))")
 echo "$Sum"
