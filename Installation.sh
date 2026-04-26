@@ -6,11 +6,12 @@ if (( $ID != 0 )); then
     echo "Error:Please run as root user"
     exit 1
 fi
-if [ dnf list installed mysql ]; then
+dnf list installed mysql
+if [ $? -eq 0 ]; then
     echo "Mysql is installed"
     exit 0
 else
-    dnf instal mysql -y
+    dnf install mysql -y
     echo "Mysql is now installed"
 fi
 
