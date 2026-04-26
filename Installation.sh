@@ -3,17 +3,24 @@
 ID=$(id -u)
 #[ "$ID" -ne 0 ] && echo "Run as root" && exit 1
 if (( $ID != 0 )); then
-    echo "Error:Please run as root user"
+    echo -e "\e[31m Error\e[0m:Please run as root user"
     exit 1
 fi
 Validate (){
 dnf list installed "$1"
 if [ $? -eq 0 ]; then
-    echo "$1 is installed"
+    echo -e "$1 is already \e[32m installed\e[0m"
     exit 0
 else
     dnf install "$1" -y
-    echo "$1 is now installed"
+    if [ $? -ne 0 ]; then
+        echo -e "Error:\e[33m installing \e[0m $1"
+        exit 1
+    else
+        echo -e "$1 is now \e[32m installed \e[0m"
+    fi
 fi
 }
 Validate "mysql-server"
+validate "python3"
+validate "nodejs"
