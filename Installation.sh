@@ -5,8 +5,6 @@ ID=$(id -u)
 if (($ID == 0)); then
     echo "Error:Please run as root user"
     exit 1
-else
-    exit 0
 fi
 
 
