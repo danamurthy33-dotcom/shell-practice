@@ -2,7 +2,7 @@
 
 ID=$(id -u)
 LogFolder="/var/log/shellscript-logs.logs"
-Script=$(echo $0 | cut -d "." -F1)
+Script=$(echo $0 | cut -d "." -f1)
 LogFile="$LogFolder/$Script.log"
 mkdir -p $LogFolder
 #[ "$ID" -ne 0 ] && echo "Run as root" && exit 1
