@@ -6,13 +6,14 @@ if (( $ID != 0 )); then
     echo "Error:Please run as root user"
     exit 1
 fi
-dnf list installed mysql
+Validate (){
+dnf list installed "$1"
 if [ $? -eq 0 ]; then
-    echo "Mysql is installed"
+    echo "$1 is installed"
     exit 0
 else
-    dnf install mysql -y
-    echo "Mysql is now installed"
+    dnf install "$1" -y
+    echo "$1 is now installed"
 fi
-
-
+}
+Validate "mysql-server"
