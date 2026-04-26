@@ -23,4 +23,4 @@ fi
 
 Validate "mysql-server"
 Validate "python3"
-#Validate "nodejs"
+Validate "nginx"
