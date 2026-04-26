@@ -10,7 +10,6 @@ Validate (){
 dnf list installed "$1"
 if [ $? -eq 0 ]; then
     echo -e "$1 is already \e[32m installed\e[0m"
-    exit 0
 else
     dnf install "$1" -y
     if [ $? -ne 0 ]; then
@@ -24,4 +23,4 @@ fi
 
 Validate "mysql-server"
 Validate "python3"
-Validate "nodejs"
+#Validate "nodejs"
