@@ -21,6 +21,7 @@ else
     fi
 fi
 }
+
 Validate "mysql-server"
-validate "python3"
-validate "nodejs"
+Validate "python3"
+Validate "nodejs"
