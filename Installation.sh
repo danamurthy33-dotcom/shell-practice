@@ -1,9 +1,6 @@
 #!/bin/bash
 
 ID=$(id -u)
-if [ $ID -ne 0 ]; then
-    echo "Please run with SUDO access"
-    exit 1
-fi
+[ "$EUID" -ne 0 ] && echo "Run as root" && exit 1
 
 dnf install mysql -y
