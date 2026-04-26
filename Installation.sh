@@ -7,11 +7,11 @@ if (( $ID != 0 )); then
     exit 1
 fi
 Validate (){
-dnf list installed "$1" &
+dnf list installed "$1" &>/dev/null
 if [ $? -eq 0 ]; then
     echo -e "$1 is already \e[32m installed\e[0m"
 else
-    dnf install "$1" -y
+    dnf install "$1" -y &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "Error:\e[33m installing \e[0m $1"
         exit 1
